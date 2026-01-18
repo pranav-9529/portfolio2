@@ -1,7 +1,6 @@
 /* ===============================
-   Reveal on Scroll (Step-by-Step)
+   Reveal on Scroll
 ================================ */
-
 const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
@@ -14,17 +13,18 @@ const revealObserver = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.2,          // element visible 20%
-        rootMargin: "0px 0px -80px 0px" // reveal slightly before center
+        threshold: 0.2,
+        rootMargin: "0px 0px -80px 0px"
     }
 );
 
 revealElements.forEach(el => revealObserver.observe(el));
 
+
+
 /* ===============================
    Floating Parallax Images
 ================================ */
-
 const computer = document.querySelector(".computer");
 const mobile = document.querySelector(".mobile");
 
@@ -57,7 +57,6 @@ window.addEventListener("scroll", () => {
 /* ===============================
    Project Modal Logic
 ================================ */
-
 const modal = document.getElementById("projectModal");
 const modalTitle = document.getElementById("projectTitle");
 const modalDesc = document.getElementById("projectDescription");
@@ -72,7 +71,7 @@ function openProject(title, description) {
 
 function closeProject() {
     modal.classList.remove("show");
-    document.body.style.overflow = "";
+    document.body.style.overflow = ""; // unlock scroll
 }
 
 /* Close modal on outside click */
@@ -88,3 +87,26 @@ document.addEventListener("keydown", (e) => {
         closeProject();
     }
 });
+
+
+/* ===============================
+   Responsive Hero and Projects for Mobile
+================================ */
+function handleResize() {
+    const heroLayout = document.querySelector(".hero-layout");
+    const projectsGrid = document.querySelector(".projects-grid");
+
+    if (window.innerWidth <= 768) {
+        // Stack hero vertically
+        if (heroLayout) heroLayout.style.flexDirection = "column";
+
+        // Stack project cards
+        if (projectsGrid) projectsGrid.style.gridTemplateColumns = "1fr";
+    } else {
+        if (heroLayout) heroLayout.style.flexDirection = "row";
+        if (projectsGrid) projectsGrid.style.gridTemplateColumns = "repeat(auto-fit, minmax(230px, 1fr))";
+    }
+}
+
+window.addEventListener("resize", handleResize);
+window.addEventListener("load", handleResize);

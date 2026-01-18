@@ -82,39 +82,93 @@ body {
 }
 
 /* ================= HERO ================= */
+/* ================= HERO ================= */
 .hero {
-  min-height: 100vh;
-  padding-top: 140px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 70px;
 }
 
-.hero-image img {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(239, 68, 68, 0.6);
-  box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+.hero-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
 }
 
-.hero-content h1 {
-  font-size: 2.6rem;
+.hero-text h4 {
+  color: #aaa;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.hero-content span {
-  color: #f87171;
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
-.hero-subtitle {
-  margin: 14px 0 25px;
-  color: #94a3b8;
+.hero-text .highlight {
+  color: #ff3c3c;
 }
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff3c3c;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ff3c3c;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+}
+
+.hero-image-wrapper .hero-img {
+  width: 100%;
+  border-radius: 20px;
+  border: 5px solid #ff3c3c;
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.5);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  filter: brightness(0) invert(0.6);
+}
+
 
 /* ================= BUTTON ================= */
 .btn-primary {
@@ -224,11 +278,21 @@ body {
   box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
 }
 
-/* ================= MODAL ================= */
+/* ================= PROJECT MODAL ================= */
 .project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;
+    z-index: 1000;
 }
 
 .project-modal.show {
@@ -237,43 +301,78 @@ body {
 }
 
 .project-modal-content {
-  background: #111;
-  padding: 30px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 450px;
-  animation: scaleUp 0.3s ease;
-  position: relative;
+    background: #111;
+    padding: 25px 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    animation: scaleUp 0.3s ease;
+    position: relative;
 }
 
 .project-modal-content h2 {
-  color: #ef4444;
-  margin-bottom: 10px;
+    color: hsl(0, 100%, 60%);
+    margin-bottom: 12px;
+    font-size: 1.8rem;
 }
 
 .project-modal-content p {
-  font-size: 15px;
-  line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #fff;
 }
 
 .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 22px;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: hsl(0, 100%, 60%);
 }
 
 @keyframes scaleUp {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
+
+/* ================= RESPONSIVE MODAL ================= */
+@media (max-width: 768px) {
+    .project-modal-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .project-modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-modal-content p {
+        font-size: 14px;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-image-wrapper {
+        max-width: 250px;
+    }
+}
+
 
 /* ================= CONTACT ================= */
 .bg-dark {
