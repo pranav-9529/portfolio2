@@ -1,128 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pranav Gajanan Daud | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- Navbar -->
-<header>
-    <h2 class="logo">Pranav</h2>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="container nav-container">
+        <h2 class="logo">Pranav</h2>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<!-- Hero Section (Image First) -->
-<section class="hero hero-split">
-    <div class="hero-left">
-        <img src="images/pranav.jpg" alt="Pranav" class="profile-img">
-    </div>
+<main>
 
-    <div class="hero-right">
-        <h1>Hi, I'm <span>Pranav Gajanan Daud</span></h1>
-        <p>Flutter Developer | UI/UX Designer | Web Developer</p>
-        <a href="#about" class="btn">Explore More</a>
+<!-- ================= HERO ================= -->
+<section class="hero reveal">
+    <div class="container hero-layout">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-text">
+            <h4>Hello, I'm</h4>
+            <h1>
+                <span class="highlight">Pranav Gajanan Daud</span>
+            </h1>
+            <p class="hero-description">
+                UI/UX Designer | Flutter & Web Developer | Passionate about creating clean and user-focused designs
+            </p>
+
+            <a href="#contact" class="btn-primary">Let's Talk</a>
+
+            <!-- Social Links -->
+            <div class="social-icons">
+                <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+                <a href="#"><img src="images/dribbble.png" alt="Dribbble" /></a>
+                <a href="#"><img src="images/behance.png" alt="Behance" /></a>
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-image-wrapper">
+            <img src="images/pranav.png" alt="Pranav Gajanan Daud" class="hero-img" />
+        </div>
+
     </div>
 </section>
 
-<!-- Floating Tech Images -->
+
+
+
+<!-- Floating visuals -->
 <div class="floating-images">
-    <img src="images/computer.png" class="float-img computer">
-    <img src="images/mobile.png" class="float-img mobile">
+    <img src="images/computer.png" class="float-img computer" />
+    <img src="images/mobile.png" class="float-img mobile" />
 </div>
 
-
-
-<!-- About Section -->
+<!-- ================= ABOUT ================= -->
 <section id="about" class="section reveal">
-    <h2>About Me</h2>
-    <p>
-        I am Pranav Gajanan Daud, a final-year Diploma student in Computer Engineering with a strong passion for application development and UI/UX design.
-I have hands-on experience in Flutter, web development (HTML, CSS), Node.js, and MongoDB.
-I enjoy building real-world projects that solve practical problems and deliver smooth user experiences.
-I am a quick learner, creative thinker, and continuously work on improving my technical skills.
-My goal is to grow as a full-stack developer and contribute to innovative and impactful solutions.
-    </p>
+    <div class="container narrow">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">
+            I am a final-year Diploma student in Computer Engineering with a strong
+            passion for application development and UI/UX design.
+        </p>
+        <p class="section-text">
+            I enjoy building real-world projects that solve practical problems and
+            deliver smooth, user-focused experiences.
+        </p>
+    </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="section reveal">
-    <h2>Skills</h2>
-    <div class="skill-cards">
-        <div class="skill-card">
-            <img src="images/flutter.png">
-            <h4>Flutter</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/uiux.png">
-            <h4>UI/UX Design</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/web.png">
-            <h4>Web Development</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/db.png">
-            <h4>MongoDB</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/java.png">
-            <h4>Java</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/python.png">
-            <h4>Python</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/node.png">
-            <h4>Node.js</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/html.png">
-            <h4>HTML</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/css.png">
-            <h4>CSS</h4>
-        </div>
-        <div class="skill-card">
-            <img src="images/cpp.png">
-            <h4>C++</h4>
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section bg-light reveal">
+    <div class="container">
+        <h2 class="section-title center">Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card reveal"><img src="images/flutter.png"><span>Flutter</span></div>
+            <div class="skill-card reveal"><img src="images/uiux.png"><span>UI/UX Design</span></div>
+            <div class="skill-card reveal"><img src="images/web.png"><span>Web Development</span></div>
+            <div class="skill-card reveal"><img src="images/db.png"><span>MongoDB</span></div>
+            <div class="skill-card reveal"><img src="images/node.png"><span>Node.js</span></div>
+            <div class="skill-card reveal"><img src="images/java.png"><span>Java</span></div>
+            <div class="skill-card reveal"><img src="images/python.png"><span>Python</span></div>
+            <div class="skill-card reveal"><img src="images/html.png"><span>HTML</span></div>
+            <div class="skill-card reveal"><img src="images/css.png"><span>CSS</span></div>
+            <div class="skill-card reveal"><img src="images/cpp.png"><span>C++</span></div>
         </div>
     </div>
 </section>
 
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section reveal">
+    <div class="container">
+        <h2 class="section-title center">Projects</h2>
 
+        <div class="projects-grid">
+            <div class="project-card reveal" onclick="openProject(
+                'Personal AI Assistant (Genius)',
+                'Personal AI Assistant (Genius) is an intelligent desktop or web-based assistant designed to help users automate tasks, answer queries, and provide real-time information using AI-powered capabilities. It acts as a smart companion for productivity, learning, and daily routines.'
+            )">
+                <h4>Personal AI Assistant</h4>
+                <p>Python · Automation</p>
+            </div>
 
-<!-- Projects Section -->
-<div class="projects">
-    <div class="card" onclick="openProject(
-        'Personal AI Assistant (Genius)',
-        'An AI-based desktop assistant that performs tasks like opening apps, answering queries, and automating daily activities using Python.'
-    )">Personal AI Assistant (Genius)</div>
+            <div class="project-card reveal" onclick="openProject(
+                'Airline Management Website',
+                'The Airline Management Website is a web-based system designed to manage airline operations efficiently. It allows users and administrators to handle flight schedules, bookings, and customer information in a user-friendly online interface.'
+            )">
+                <h4>Airline Management System</h4>
+                <p>HTML · CSS</p>
+            </div>
 
-    <div class="card" onclick="openProject(
-        'Airline Management Website',
-        'A web-based airline system with flight listings, booking UI, and admin management built using HTML, CSS, and backend logic.'
-    )">Airline Management Website</div>
+            <div class="project-card reveal" onclick="openProject(
+                'Weather Forecast App',
+                'The Weather Forecast App is a Flutter-based mobile application that provides users with real-time weather information and a 5-day forecast for any location. It helps users plan their day by displaying current weather, temperature, humidity, wind speed, and other weather parameters.'
+            )">
+                <h4>Weather Forecast App</h4>
+                <p>Flutter · API</p>
+            </div>
 
-    <div class="card" onclick="openProject(
-        'Weather Forecast App',
-        'A Flutter-based mobile app that fetches real-time weather data and forecasts using OpenWeatherMap API with a modern UI.'
-    )">Weather Forecast App</div>
+            <div class="project-card reveal" onclick="openProject(
+                'Women Safety App',
+                'The Women Safety App is a mobile application designed to enhance personal safety for women. It provides real-time location tracking, emergency alerts, and quick access to help, ensuring users can reach safety and alert trusted contacts in case of danger.'
+            )">
+                <h4>Women Safety App</h4>
+                <p>Flutter · Ongoing</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <div class="card" onclick="openProject(
-        'Women Safety App',
-        'An ongoing Flutter application focused on emergency alerts, live location sharing, and quick SOS features.'
-    )">Women Safety App (Ongoing)</div>
-</div>
+<!-- Modal -->
 <div id="projectModal" class="project-modal">
     <div class="project-modal-content">
         <span class="close-btn" onclick="closeProject()">×</span>
@@ -131,22 +150,53 @@ My goal is to grow as a full-stack developer and contribute to innovative and im
     </div>
 </div>
 
+<!-- ================= CONTACT ================= -->
+<!-- Add this in <head> if not already -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
-<!-- Contact Section -->
-<section id="contact" class="section reveal">
-    <div class="glass-heading">
-        <h2>Contact Me</h2>
-    </div>
+<section id="contact" class="section bg-dark reveal">
+    <div class="container narrow center">
+        <h2 class="section-title" style="color: #ff2121;">Contact Us</h2>
+       
+        <div class="contact-cards">
+            <!-- Address Card -->
+            <div class="contact-card">
+                <i class="fas fa-home contact-icon"></i>
+                <h4>Visit Us</h4>
+                <p>Sillod, Chh. Sambhajinagar</p>
+            </div>
 
-    <div class="contact-info">
-        <p>Email: pranavdaud@gmail.com</p>
-        <p>Location: Sillod, Chh. Sambhaji Nagar</p>
+            <!-- Phone Card -->
+            <div class="contact-card">
+                <i class="fas fa-phone contact-icon"></i>
+                <h4>Call Us</h4>
+                <p>+91 9529476103</p>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+    <h4>Contact Us</h4>
+    
+    <!-- Email -->
+    <p>pranavdaud@gmail.com</p>
+    
+
+        </div>
+        <!-- Instagram Card -->
+            <div class="contact-card">
+                <i class="fab fa-instagram contact-icon"></i>
+                <h4>Instagram</h4>
+                <p>pranavdaud71</p>
+            </div>
     </div>
 </section>
 
 
-<!-- Footer -->
-<footer>
+
+</main>
+
+<footer class="footer">
     <p>© 2026 Pranav Gajanan Daud. All rights reserved.</p>
 </footer>
 
